@@ -1,6 +1,6 @@
 # react-webpack-template
 
-This is a simple template for building React apps. Use this to get started, and if you find yourself needing additional features, see my [webpack-howto](https://github.com/petehunt/webpack-howto).
+This is a simple template for building React apps. Use this to get started, and if you find yourself needing additional features, see this [webpack-howto](https://github.com/petehunt/webpack-howto).
 
 ## How to use this
 
