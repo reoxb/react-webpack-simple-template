@@ -8,7 +8,8 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'browser-bundle.js'
+    publicPath: "/dist/",
+    filename: 'bundle.js'
   },
   devtool: 'source-map',
   module: {
