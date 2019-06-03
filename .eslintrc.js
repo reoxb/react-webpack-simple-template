@@ -1,18 +1,26 @@
 // https://eslint.org/docs/user-guide/configuring
 
 module.exports = {
+  "plugins": [
+      "react"
+  ],
   env: {
     browser: true,
+    node: true,
     es6: true,
   },
   extends: [
     // https://github.com/eslint/eslint/blob/master/conf/eslint-recommended.js
     'eslint:recommended',
+    'plugin:react/recommended'
   ],
   parser: 'babel-eslint',
   parserOptions: {
     ecmaVersion: 6,
     sourceType: 'module',
+    'ecmaFeatures': {
+      "jsx": true
+    }
   },
   // add your custom rules here
   rules: {

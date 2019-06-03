@@ -51,6 +51,12 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
+        enforce: 'pre', // checked before being processed by babel-loader
+        test: /\.(js)$/,
+        loader: 'eslint-loader',
+        exclude: /node_modules/,
+      },
+      {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
@@ -81,8 +87,7 @@ module.exports = {
       minify: {
          collapseWhitespace: true
       }
-    }), 
-    ,
+    }),
     new MiniCssExtractPlugin({
       filename: './css/[name].css'
     }),
