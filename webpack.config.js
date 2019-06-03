@@ -1,5 +1,5 @@
 const path = require('path');
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
@@ -7,9 +7,9 @@ module.exports = {
     index: './src/index.js'
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
     publicPath: "/dist/",
-    filename: 'bundle.js'
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist')
   },
   devtool: 'source-map',
   module: {
@@ -53,7 +53,7 @@ module.exports = {
       },
       {
         enforce: 'pre', // checked before being processed by babel-loader
-        test: /\.(js)$/,
+        test: /\.(js|jsx)$/,
         loader: 'eslint-loader',
         exclude: /node_modules/,
       },
@@ -86,7 +86,7 @@ module.exports = {
       filename: "index.html",
       chunks: ['index'],
       minify: {
-         collapseWhitespace: true
+         collapseWhitespace: false
       }
     }),
     new MiniCssExtractPlugin({
